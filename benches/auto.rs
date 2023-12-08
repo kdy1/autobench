@@ -31,7 +31,7 @@ macro_rules! bench_size {
         fn $hashmap_name(b: &mut Bencher) {
             let mut auto = FxHashMap::default();
             for i in 0..$size {
-                auto.insert(i, i);
+                auto.insert(i, random_string());
             }
 
             b.iter(|| {
@@ -45,7 +45,7 @@ macro_rules! bench_size {
         fn $vec_name(b: &mut Bencher) {
             let mut auto = VecMap::new();
             for i in 0..$size {
-                auto.insert(i, i);
+                auto.insert(i, random_string());
             }
 
             b.iter(|| {
