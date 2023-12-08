@@ -7,4 +7,9 @@ edition = "2021"
 
 [dependencies]
 serde = { version = "1.0.193", features = ["derive"] }
-smallvec = { version = "1.11.2", features = ["serde"] }
+smallvec = { version = "1.11.1", features = [
+  "serde",
+  "const_generics",
+  "union",
+  "const_new",
+] }
